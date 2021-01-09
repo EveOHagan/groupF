@@ -164,7 +164,7 @@ function send2AFC() {
     db.collection("2afc").doc().set(answers)
     
         .then(function () {
-            window.location.href =("postExperiment.html")
+            window.location.href =("postexperiment.html")
         })
         .catch(function (error) {
             console.error("Error writing document: ", error);
