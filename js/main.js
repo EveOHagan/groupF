@@ -245,9 +245,11 @@ function changeRateImage(){
         var img = document.getElementById("mainImage");
         counter = counter + 1
         window.sessionStorage.setItem("counter", counter)
+
+        practiceSort = practice.sort(() => Math.random() - 0.5);
     
         if (practice.length > 0 ){
-            img.src = practice[0]
+            img.src = practiceSort[0]
             practice.splice(0, 1)
             window.sessionStorage.setItem("practice", JSON.stringify(practice))
         } else {
