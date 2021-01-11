@@ -312,7 +312,7 @@ function sendRate() {
 // Rank Website 
 function startRank(){ 
     var practiceArray = new Array();
-    practiceArray[0] = ["images/images/practice/practice1.jpg", "images/images/practice/practice2.jpg", "images/images/practice/practice4.jpg", "images/images/practice/practice7.jpg"]
+practiceArray[0] = ["images/images/practice/practice1.jpg", "images/images/practice/practice2.jpg", "images/images/practice/practice3.jpg", "images/images/practice/practice4.jpg", "images/images/practice/practice7.jpg", ]
     
     
     var imageArray = new Array();
@@ -427,6 +427,7 @@ function randomImageRank(){
 
     sorted = images.sort(() => Math.random() - 0.5);
     sortedSecond = images2.sort(() => Math.random() - 0.5);
+    practiceSorted = practice.sort(() => Math.random() - 0.5);
 
     var i = 0;
     var j = 1;
@@ -434,10 +435,10 @@ function randomImageRank(){
     var l = 3;
 
     if (practice.length > 0 ){
-      image1.src = practice[0][0]
-      image2.src = practice[0][1]
-      image3.src = practice[0][2]
-      image4.src = practice[0][3]
+      image1.src = practiceSorted[0][0]
+      image2.src = practiceSorted[0][1]
+      image3.src = practiceSorted[0][2]
+      image4.src = practiceSorted[0][3]
       count = count + 1;
       practice.splice(0, 1)
       window.sessionStorage.setItem("practice", JSON.stringify(practice))
